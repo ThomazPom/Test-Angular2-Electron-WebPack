@@ -31,6 +31,7 @@ import { routes } from './app.routes';
  * Import the authentication service to be injected into our component
  */
 import { Authentication } from './services/authentication';
+import {AccueilComponent} from "./components/accueil/accueil.component";
 
 /*
  * provide('AppStore', { useValue: appStore }),
@@ -46,7 +47,7 @@ import { Authentication } from './services/authentication';
         StoreModule.provideStore({ authStore }, { authStore: authInitialState }),
     ],
     providers: [Authentication],
-    declarations: [AppComponent, HomeComponent, LoginComponent],
+    declarations: [AppComponent, HomeComponent, LoginComponent, AccueilComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
